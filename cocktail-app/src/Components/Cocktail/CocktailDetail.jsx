@@ -25,7 +25,7 @@ function CocktailDetail() {
     
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:5000/api/cocktails/${id}`);
+      const response = await fetch(`https://server-2-kefk.onrender.com/api/cocktails/${id}`);
       if (!response.ok) throw new Error('Failed to fetch cocktail');
       
       const data = await response.json();
@@ -94,8 +94,8 @@ function CocktailDetail() {
 
     try {
       const url = id === 'new' 
-        ? 'http://localhost:5000/api/cocktails'
-        : `http://localhost:5000/api/cocktails/${id}`;
+        ? 'https://server-2-kefk.onrender.com/api/cocktails'
+        : `https://server-2-kefk.onrender.com/api/cocktails/${id}`;
       
       const method = id === 'new' ? 'POST' : 'PUT';
 
@@ -131,7 +131,7 @@ function CocktailDetail() {
     if (!window.confirm('Are you sure you want to delete this cocktail?')) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/cocktails/${id}`, {
+      const response = await fetch(`https://server-2-kefk.onrender.com/api/cocktails/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`

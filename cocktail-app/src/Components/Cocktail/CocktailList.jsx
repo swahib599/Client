@@ -12,7 +12,7 @@ function CocktailList() {
   useEffect(() => {
     const fetchCocktails = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/cocktails');
+        const response = await fetch('https://server-2-kefk.onrender.com/api/cocktails');
         if (!response.ok) throw new Error('Failed to fetch cocktails');
         
         const data = await response.json();

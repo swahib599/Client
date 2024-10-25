@@ -15,7 +15,7 @@ function ReviewList({ reviews, onReviewDeleted }) {
     if (!window.confirm('Are you sure you want to delete this review?')) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/reviews/${reviewId}`, {
+      const response = await fetch(`https://server-2-kefk.onrender.com/api/reviews/${reviewId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
