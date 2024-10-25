@@ -2,7 +2,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
-import Nav from './Components/Nav/Nav';  // Note the capital C in Components
+import Nav from './Components/Nav/Nav';  
 
 function App() {
   return (
